@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin-bottom: 2.5rem;
+  transition: all 0.4s ease-in-out;
+  background-color: #f4f4f4;
+}
+/* 
+body:has(input:checked) {
+  background-color: #1f1f1f;
+  color: #eee;
+} */
+
+/*===========================
+NAVBAR STYLES
+=========================== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+#darkContent {
+  font-size: 30px;
+  background: transparent;
+  border: none;
+}
+
+.image {
+  margin-top: 2.5rem;
+  width: 150px;
+  height: 150px;
+}
+/* ANIMATIONS */
+.animate{
+  opacity:0;
+  transform:translateY(50px);
+  filter:blur(8px);
+  transition:1s ease;
+}
+
+.animate.show{
+  opacity:1;
+  transform:translateY(0);
+  filter:blur(0);
+}
+
+.left{transform:translateX(-60px);}
+.right{transform:translateX(60px);}
+.scale{transform:scale(0.7);}
+
+.left.show,.right.show,.scale.show{
+  transform:translateX(0) scale(1);
+}
+
+/* STAGGER */
+.animate:nth-child(1){transition-delay:0.2s;}
+.animate:nth-child(2){transition-delay:0.4s;}
+.animate:nth-child(3){transition-delay:0.6s;}
+
+/*==============================
+HOME BACKGROUND SLIDER STYLES
+============================== */
+.home {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  animation: bgSlide 15s infinite ease-in-out;
+  background-size: cover;
+  background-position: center;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.home-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.content {
+  font-size: 3rem;
+  font-weight: 545;
+}
+
+.motto {
+  font-size: 1.5rem;
+}
+
+.motto2 {
+  margin-top: 3.5rem;
+  font-size: 10.5px;
+  font-weight: 500;
+}
+
+/* Background animation */
+@keyframes bgSlide {
+  0%   { background-image: url('/Portfolio/assets/Image\ 1.jpeg'); }
+  33%  { background-image: url('/Portfolio/assets/Image\ 5.jpeg'); }
+  66%  { background-image: url('/Portfolio/assets/Image\ 7.jpeg'); }
+  100% { background-image: url('/Portfolio/assets/Image\ 1.jpeg'); }
+  /* 0%   { background-image: url('../asset/Casa_Para_Estudiantes_Atras_2_by_estevao.jpg'); }
+  33%  { background-image: url('../asset/Casa_Para_Estudiantes_Atras_by_estevao.jpg'); }
+  66%  { background-image: url('../asset/Exterior_Classic_house_by_GTOdesign.jpg'); }
+  100% { background-image: url('../asset/Casa_Para_Estudiantes_Atras_2_by_estevao.jpg'); } */
+}
+
+.btn {
+  width: 7.5em;
+  height: 2.5em;
+  margin: 0.5em;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 0.625em;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.btn:hover {
+  color: black;
+}
+
+.btn:after,
+.toTop:after {
+  content: "";
+  background: white;
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+}
+
+.btn:hover:after,
+.toTop:hover:after {
+  transform: skewX(-45deg) scale(1, 1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.toTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50%;
+  background-color: #0ff;
+  color: #000;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.toTop:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 9px 0.5px #000;
+}
