@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GSS Aleyita Webpage</title>
     <!-- Box icon font link -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <link rel="stylesheet" href="./css/navbar.css">
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/aboutUs.css">
+    <link rel="stylesheet" href="./css/ourMedia.css">
     <link rel="shortcut icon" href="./asset/Aleyita Logo.png" type="image/x-icon">
 </head>
 <body id="body">
@@ -28,35 +29,31 @@
                     </div>
                     <ul class="links">
                         <li><a href="#home">Home</a></li>
+                        
                         <li>
-                            <a href="./aboutUs.html" target="_blank">About Us</a>
+                            <a href="./aboutUs.html">About Us</a>
                             <i class='bx bxs-chevron-down arrow about-us'></i>
                             <ul class="about-us-sub-menu sub-menu">
                                 <a href="./aboutUs.html"><li>Origin of GSS Aleyita</li></a>
                                 <a href="./aboutUs.html"><li>Goals, Aims & Objectives</li></a>
-                                <a href="./aboutUs.html"><li>Achievments/Extra Curriculum Events</li></a>
+                                <a href="./aboutUs.html"><li>Extra Curriculum Events</li></a>
                                 <a href="./aboutUs.html"><li>Staff Profiles</li></a>
                                 <a href="./aboutUs.html"><li>Prefects</li></a>
                             </ul>
                         </li>
+
+                        <li><a href="./ourMedia.html">Our Media</a></li>
+                        
                         <li>
-                            <a href="#ourMedia" target="_blank">Our Media</a>
-                            <i class='bx bxs-chevron-down arrow our-media'></i>
-                            <ul class="our-media-sub-menu sub-menu">
-                                <a href="#"><li>Reports</li></a>
-                                <a href="#"><li>News</li></a>
-                                <a href="#"><li>Photo Gallary</li></a>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#pta" target="_blank">P.T.A</a>
+                            <a href="#pta">P.T.A</a>
                             <i class='bx bxs-chevron-down arrow pta'></i>
                             <ul class="pta-sub-menu sub-menu">
                                 <a href="#"><li>Excos</li></a>
                                 <a href="#"><li>Achievments</li></a>
                             </ul>
                         </li>
-                        <li><a href="#contactUs" target="_blank">Contact Us</a></li>
+                        
+                        <li><a href="#contactUs">Contact Us</a></li>
                     </ul>
                 </div>
                 <!-- <div class="search-box">
@@ -66,7 +63,7 @@
                     </div> -->
                     <div class="search-box">
                         <i class='bx bx-search-alt-2'></i>
-                        <form action="https://www.google.com" method="GET">
+                        <form action="https://www.google.com" method="GET" target="_blank">
                             <div class="input-box">
                                 <input 
                                     type="search" 
@@ -115,7 +112,7 @@
         <div class="aboutUs-content">
             <div class="origin" id="origin">
                 <p class="image-wrapper animate right">
-                    <img src="./asset/Casa_Para_Estudiantes_Atras_2_by_estevao.jpg" alt="students pic">
+                    <img src="./asset/Casa_Para_Estudiantes_Atras_2_by_estevao.jpg" class="longPic" alt="students pic">
                 </p>
                 <p class="origin-content animate left">
                     <span>Welcome to our school</span><br>
@@ -135,9 +132,31 @@
                     The school is driven by strong values that guide all its actions and decisions. These values<br>
                     support the school’s vision of raising well-rounded students who are academically sound, morally upright, and prepared to contribute positively to society.<br>
                     <br>
-                    <a href="./aboutUs.html" target="_blank"><button class="readMoreAboutUs">Read More</button></a>
+                    <a href="./aboutUs.html"><button class="readMoreAboutUs">Read More</button></a>
                 </p>
             </div>
+        </div>
+    </section>
+
+
+    <!-- =========================
+        OUR MEDIA SECTION
+        ======================== -->
+    <section class="ourMedia" id="ourMedia">
+        <div class="container career-day">
+            <img src="./asset/Exterior_Classic_house_by_GTOdesign.jpg" alt="Career day">
+            <img src="./asset/Casa_Para_Estudiantes_Atras_2_by_estevao.jpg" alt="Career day">
+            <img src="./asset/Casa_Para_Estudiantes_Atras_by_estevao.jpg" alt="Career day">
+        </div>
+        <div class="container cultural-day">
+            <img src="./asset/Casa_Para_Estudiantes_Atras_by_estevao.jpg" alt="Cultural day">
+            <img src="./asset/Exterior_Classic_house_by_GTOdesign.jpg" alt="Cultural day">
+            <img src="./asset/Casa_Para_Estudiantes_Atras_2_by_estevao.jpg" alt="Cultural day">
+        </div>
+        <div class="container inter-house-sport">
+            <img src="./asset/Casa_Para_Estudiantes_Atras_2_by_estevao.jpg" alt="Inter-House Sport">
+            <img src="./asset/Casa_Para_Estudiantes_Atras_by_estevao.jpg" alt="Inter-House Sport">
+            <img src="./asset/Exterior_Classic_house_by_GTOdesign.jpg" alt="Inter-House Sport">
         </div>
     </section>
 
@@ -148,3 +167,4 @@
     <script src="./js/general.js"></script>
 </body>
 </html>
+

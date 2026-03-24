@@ -30,10 +30,10 @@ let aboutUs = document.querySelector(".about-us");
 aboutUs.addEventListener("click", ()=>{
     navLinks.classList.toggle("show1");
 });
-let ourMedia = document.querySelector(".our-media");
-ourMedia.addEventListener("click", ()=>{
-    navLinks.classList.toggle("show2");
-});
+// let ourMedia = document.querySelector(".our-media");
+// ourMedia.addEventListener("click", ()=>{
+//     navLinks.classList.toggle("show2");
+// });
 let pta = document.querySelector(".pta");
 pta.addEventListener("click", ()=>{
     navLinks.classList.toggle("show3");
